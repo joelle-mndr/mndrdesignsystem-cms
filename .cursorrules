@@ -1,0 +1,1 @@
+When generating UI from Figma, always check for existing CSS variables in theme.css. Never use raw hex codes. Every component must have a corresponding .stories.tsx file.

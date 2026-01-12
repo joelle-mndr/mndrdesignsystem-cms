@@ -1,0 +1,27 @@
+name: Build and Deploy Storybook
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: design-system
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build-storybook
+      - name: Upload to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'design-system/storybook-static'
+      - name: Deploy
+        uses: actions/deploy-pages@v4
+
