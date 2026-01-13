@@ -2,20 +2,39 @@
 :root {
   /* Colors - Background */
   --color-bg-primary: #ffffff;
+  --color-bg-brand-solid: #1570ef;
+  --color-bg-brand-primary: #eff8ff;
+  --color-bg-secondary: #eff1f5;
+  --color-bg-error: #fdedee;
   
   /* Colors - Border */
   --color-border-primary: #d0d5dd;
   --color-border-secondary: #dcdfea;
   --color-border-brand: #2e90fa;
+  --color-border-error: #cb2027;
   
   /* Colors - Text */
   --color-text-primary: #0e101b;
   --color-text-secondary: #4a5578;
   --color-text-disabled: #7d89b0;
   --color-text-placeholder: #7d89b0;
+  --color-text-brand: #1570ef;
+  --color-text-error: #cb2027;
+  --color-text-white: #ffffff;
   
   /* Colors - Neutral */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f4f7fa;
+  --color-neutral-200: #dee5eb;
+  --color-neutral-400: #a8b7c2;
   --color-neutral-500: #8596a3;
+  
+  /* Colors - Error */
+  --color-error-50: #fdedee;
+  --color-error-500: #cb2027;
+  
+  /* Colors - Utility */
+  --color-utility-gray-50: #f9f9fb;
   
   /* Colors - Focus */
   --color-focus-ring: #b2ddff;
@@ -38,9 +57,26 @@
   --font-size-body: 14px;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --line-height-body: 20px;
+  
+  /* Component - Button */
+  --button-height: 32px;
+  --button-padding-h: 12px;
+  --button-padding-v: 4px;
+  --button-text-size: 14px;
+  --button-text-weight: 600;
+  --button-line-height: 20px;
+  --button-border-radius: 4px;
+  --button-gap: 8px;
+  --button-icon-size: 16px;
   
   /* Shadows */
   --shadow-focus-ring: 0px 0px 0px 2px var(--color-focus-ring);
+  
+  /* Gradients - AI Theme */
+  --gradient-ai-primary: linear-gradient(98.5deg, #f65e83 4.23%, #bc78e6 41.81%, #5e90f0 77.78%, #02d5e2 110.88%);
+  --gradient-ai-secondary: linear-gradient(180deg, #fef7fa 0%, #fbf9fe 32.5%, #f8f9fe 69%, #f5fcfe 100%);
+  --gradient-ai-text: linear-gradient(97.46deg, #f65e83 4.23%, #bc78e6 41.81%, #5e90f0 77.78%, #02d5e2 110.88%);
 }
 

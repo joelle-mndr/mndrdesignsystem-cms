@@ -1,0 +1,332 @@
+/* Figma Button Component Styles */
+@import './theme.css';
+
+.figma-button {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-gap);
+  
+  /* Sizing - Exact from Figma */
+  height: var(--button-height);
+  padding: var(--button-padding-v) var(--button-padding-h);
+  
+  /* Border - Exact from Figma */
+  border-radius: var(--button-border-radius);
+  border: 1px solid transparent;
+  
+  /* Typography */
+  font-family: var(--font-family-sans);
+  font-size: var(--button-text-size);
+  font-weight: var(--button-text-weight);
+  line-height: var(--button-line-height);
+  white-space: nowrap;
+  
+  /* Interaction */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.figma-button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus-ring);
+}
+
+/* Button Label */
+.figma-button__label {
+  display: inline-block;
+}
+
+/* Icon Styles */
+.figma-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--button-icon-size);
+  height: var(--button-icon-size);
+  flex-shrink: 0;
+}
+
+.figma-button__icon-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ========================================
+   PRIMARY BUTTON - BRAND THEME
+   ======================================== */
+
+.figma-button--primary.figma-button--brand {
+  background: var(--color-bg-brand-solid);
+  color: var(--color-text-white);
+}
+
+.figma-button--primary.figma-button--brand:hover:not(:disabled) {
+  background: #1366d6;
+}
+
+.figma-button--primary.figma-button--brand:active:not(:disabled) {
+  background: #0f5abe;
+}
+
+.figma-button--primary.figma-button--brand.figma-button--destructive {
+  background: var(--color-error-500);
+}
+
+.figma-button--primary.figma-button--brand.figma-button--destructive:hover:not(:disabled) {
+  background: #b11d23;
+}
+
+.figma-button--primary.figma-button--brand.figma-button--destructive:active:not(:disabled) {
+  background: #971a1f;
+}
+
+/* ========================================
+   PRIMARY BUTTON - AI THEME
+   ======================================== */
+
+.figma-button--primary.figma-button--ai {
+  background: var(--gradient-ai-primary);
+  color: var(--color-text-white);
+}
+
+.figma-button--primary.figma-button--ai:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.figma-button--primary.figma-button--ai:active:not(:disabled) {
+  opacity: 0.8;
+}
+
+/* ========================================
+   SECONDARY OUTLINE BUTTON - BRAND THEME
+   ======================================== */
+
+.figma-button--secondary-outline.figma-button--brand {
+  background: var(--color-neutral-0);
+  border-color: var(--color-border-brand);
+  color: var(--color-text-brand);
+}
+
+.figma-button--secondary-outline.figma-button--brand:hover:not(:disabled) {
+  background: var(--color-bg-brand-primary);
+}
+
+.figma-button--secondary-outline.figma-button--brand:active:not(:disabled) {
+  background: #d9ecff;
+}
+
+.figma-button--secondary-outline.figma-button--brand.figma-button--destructive {
+  border-color: var(--color-border-error);
+  color: var(--color-text-error);
+}
+
+.figma-button--secondary-outline.figma-button--brand.figma-button--destructive:hover:not(:disabled) {
+  background: var(--color-error-50);
+}
+
+.figma-button--secondary-outline.figma-button--brand.figma-button--destructive:active:not(:disabled) {
+  background: #fcd8da;
+}
+
+/* ========================================
+   SECONDARY OUTLINE BUTTON - AI THEME
+   ======================================== */
+
+.figma-button--secondary-outline.figma-button--ai {
+  background: var(--color-neutral-0);
+  border-color: #f65e83;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--gradient-ai-text);
+}
+
+.figma-button--secondary-outline.figma-button--ai:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.figma-button--secondary-outline.figma-button--ai:active:not(:disabled) {
+  opacity: 0.8;
+}
+
+/* ========================================
+   SECONDARY BUTTON - BRAND THEME
+   ======================================== */
+
+.figma-button--secondary.figma-button--brand {
+  background: var(--color-bg-brand-primary);
+  color: var(--color-text-brand);
+  border: none;
+}
+
+.figma-button--secondary.figma-button--brand:hover:not(:disabled) {
+  background: #d9ecff;
+}
+
+.figma-button--secondary.figma-button--brand:active:not(:disabled) {
+  background: #c4e0ff;
+}
+
+.figma-button--secondary.figma-button--brand.figma-button--destructive {
+  background: var(--color-error-50);
+  color: var(--color-text-error);
+}
+
+.figma-button--secondary.figma-button--brand.figma-button--destructive:hover:not(:disabled) {
+  background: #fcd8da;
+}
+
+.figma-button--secondary.figma-button--brand.figma-button--destructive:active:not(:disabled) {
+  background: #fac4c7;
+}
+
+/* ========================================
+   SECONDARY BUTTON - AI THEME
+   ======================================== */
+
+.figma-button--secondary.figma-button--ai {
+  background: var(--gradient-ai-secondary);
+  border-color: #d8f6fb;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--gradient-ai-text);
+}
+
+.figma-button--secondary.figma-button--ai:hover:not(:disabled) {
+  opacity: 0.95;
+}
+
+.figma-button--secondary.figma-button--ai:active:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* ========================================
+   TERTIARY BUTTON - BRAND THEME
+   ======================================== */
+
+.figma-button--tertiary.figma-button--brand {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  border: none;
+}
+
+.figma-button--tertiary.figma-button--brand:hover:not(:disabled) {
+  background: #e3e5ea;
+}
+
+.figma-button--tertiary.figma-button--brand:active:not(:disabled) {
+  background: #d7dae0;
+}
+
+.figma-button--tertiary.figma-button--brand.figma-button--destructive {
+  background: transparent;
+  color: var(--color-text-error);
+}
+
+.figma-button--tertiary.figma-button--brand.figma-button--destructive:hover:not(:disabled) {
+  background: var(--color-error-50);
+}
+
+.figma-button--tertiary.figma-button--brand.figma-button--destructive:active:not(:disabled) {
+  background: #fcd8da;
+}
+
+/* ========================================
+   TERTIARY BUTTON - AI THEME
+   ======================================== */
+
+.figma-button--tertiary.figma-button--ai {
+  background: var(--color-utility-gray-50);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--gradient-ai-text);
+  border: none;
+}
+
+.figma-button--tertiary.figma-button--ai:hover:not(:disabled) {
+  background: #f0f0f5;
+}
+
+.figma-button--tertiary.figma-button--ai:active:not(:disabled) {
+  background: #e8e8ef;
+}
+
+/* ========================================
+   TEXT BUTTON - BRAND THEME
+   ======================================== */
+
+.figma-button--text.figma-button--brand {
+  background: transparent;
+  color: var(--color-text-brand);
+  border: none;
+}
+
+.figma-button--text.figma-button--brand:hover:not(:disabled) {
+  background: var(--color-bg-brand-primary);
+}
+
+.figma-button--text.figma-button--brand:active:not(:disabled) {
+  background: #d9ecff;
+}
+
+.figma-button--text.figma-button--brand.figma-button--destructive {
+  background: transparent;
+  color: var(--color-text-error);
+}
+
+.figma-button--text.figma-button--brand.figma-button--destructive:hover:not(:disabled) {
+  background: var(--color-error-50);
+}
+
+.figma-button--text.figma-button--brand.figma-button--destructive:active:not(:disabled) {
+  background: #fcd8da;
+}
+
+/* ========================================
+   TEXT BUTTON - AI THEME
+   ======================================== */
+
+.figma-button--text.figma-button--ai {
+  background: transparent;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--gradient-ai-text);
+  border: none;
+}
+
+.figma-button--text.figma-button--ai:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.figma-button--text.figma-button--ai:active:not(:disabled) {
+  opacity: 0.8;
+}
+
+/* ========================================
+   DISABLED STATE (All variants)
+   ======================================== */
+
+.figma-button--disabled,
+.figma-button:disabled {
+  background: var(--color-neutral-50) !important;
+  border-color: var(--color-neutral-200) !important;
+  color: var(--color-neutral-400) !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+  background-image: none !important;
+  -webkit-text-fill-color: var(--color-neutral-400) !important;
+}
+
+.figma-button--disabled .figma-button__icon-svg,
+.figma-button:disabled .figma-button__icon-svg {
+  color: var(--color-neutral-400);
+}
